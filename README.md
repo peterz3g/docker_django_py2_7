@@ -10,3 +10,7 @@ for docker  env
 4，时区和crontab都已经正确设置
 
 5, 不包含具体的项目代码, 需要基于此镜像，再次构建
+
+VERSION:
+python: 2.7
+django: 1.9.8
