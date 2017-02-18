@@ -20,10 +20,5 @@ pip install --upgrade pip && \
 pip install -r /code/requirements.txt && \
 ls
 
-# the moduel is upd by myself
-ADD trading.py /usr/local/lib/python2.7/site-packages/tushare/stock/trading.py
-
 EXPOSE 80
-
 ENTRYPOINT ["/bin/bash", "/code/entrypoint.sh"]
-

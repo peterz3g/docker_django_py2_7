@@ -6,5 +6,4 @@ cat /code/project_env.sh
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 service cron restart
 
-tail -f /code/jobs.log
-
+python /code/demo/manage.py runserver localhost:80
