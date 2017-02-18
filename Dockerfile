@@ -8,9 +8,12 @@ COPY . /code/
 ADD cron_jobs.txt /var/spool/cron/crontabs/root
 
 RUN apt-get update && \
+apt-get -y upgrade gcc && \
 apt-get install -y cron && \
 apt-get install -y default-jre && \
 apt-get install -y vim && \
+apt-get install -y libxml2-dev libxslt-dev python-dev && \
+apt-get install -y python3-dev python-lxml  && \
 touch /code/jobs.log && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
 chmod +x /code/entrypoint.sh && \
