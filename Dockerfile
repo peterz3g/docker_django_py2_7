@@ -15,11 +15,14 @@ apt-get install -y vim && \
 apt-get install -y libxml2-dev libxslt-dev python-dev && \
 apt-get install -y python3-dev python-lxml  && \
 touch /code/jobs.log && \
-rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
 chmod +x /code/entrypoint.sh && \
 chmod 0600 /var/spool/cron/crontabs/root && \
 pip install --upgrade pip && \
 pip install -r /code/requirements.txt && \
+apt-get clean && \
+apt-get autoclean && \
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+
 ls
 
 EXPOSE 8000
